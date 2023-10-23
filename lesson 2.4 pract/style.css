@@ -1,0 +1,164 @@
+.child {
+  border: 3px solid #222;
+  width: 200px;
+  height: 200px;
+  border-radius: 20px;
+  font: 30px / 200px sans-serif;
+  text-align: center;
+  /* line-height: 200px; */
+}
+.child:hover {
+  background: yellow;
+}
+
+.child1 {
+  background-color: red;
+  color: white;
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+  top: 20px;
+  left: 50px;
+}
+.child2 {
+  background-color: lime;
+  /* position: relative; */
+  left: 30px;
+  top: 30px;
+}
+.child3 {
+  background-color: blue;
+  color: white;
+  position: fixed;
+  /* top: calc(50% - 103px); */
+  /* left: calc(50% - 103px);   */
+  left: 40x;
+}
+.daddy {
+  width: 700px;
+  height: 700px;
+  background-color: silver;
+  position: relative;
+}
+.modal-container {
+  display: none;
+  position: fixed;
+  background-color: #222222e1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 1;
+  backdrop-filter: blur(2px) grayscale(60%);
+}
+.modal {
+  padding: 50px;
+  background-color: white;
+  width: 30%;
+  border-radius: 5px;
+  position: absolute;
+  top: 30%;
+  left: calc(25% + 50px);
+}
+
+.modal > .close {
+  /* padding: 10px; */
+  background-color: cyan;
+  font-size: 20px;
+  line-height: 1px;
+  width: max-content;
+  border-radius: 50%;
+  background-color: white;
+  box-shadow: 0 0 5px 0 silver;
+  position: absolute;
+  top: -10px;
+  right: -10px;
+  color: #222;
+}
+
+.modal h2 {
+  margin: 0;
+  line-height: 1;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+.form-row {
+  margin-bottom: 20px;
+}
+.modal .form-row label {
+  display: block;
+  margin-bottom: 4px;
+  color: silver;
+  font-size: 12px;
+}
+.modal .form-row input {
+  border: 1px solid silver;
+  border-radius: 4px;
+  font-size: 20px;
+  padding: 6px 10px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+.btn {
+  height: 36px;
+  border-radius: 4px;
+  border: none;
+  font-size: 20px;
+  text-transform: uppercase;
+  background-color: navy;
+  color: white;
+  padding: 6px 10px;
+}
+.modal .btn {
+  width: 100%;
+}
+.close,
+.btn {
+  cursor: pointer;
+}
+
+.modal-container.active {
+  display: block;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+nav {
+  position: sticky;
+
+  z-index: 200;
+  top: 0;
+}
+.menu li {
+  display: inline-block;
+  vertical-align: top;
+  position: relative;
+  cursor: pointer;
+  padding: 10px;
+  border: 1px solid;
+  border-radius: 8px;
+}
+.submenu {
+  position: absolute;
+  background-color: #fff;
+  padding: 10px;
+  border-radius: 8px;
+  left: 0;
+  top: 40px;
+  display: none;
+}
+.submenu > li {
+  border: none;
+  width: max-content;
+}
+li:hover {
+  color: blue;
+}
+li:hover > .submenu {
+  display: block;
+}
