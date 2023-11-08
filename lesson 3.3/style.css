@@ -1,0 +1,239 @@
+html {
+  font-size: 30px;
+}
+body {
+  font-family: sans-serif;
+}
+
+p::before {
+  color: red;
+  content: "Абзац: ";
+}
+
+p::after {
+  content: "\2605";
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+li {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  padding-left: 2rem;
+  position: relative;
+  background-color: bisque;
+  line-height: 1;
+}
+li::before {
+  content: "\27A5";
+  position: absolute;
+  color: blueviolet;
+  left: 0;
+  /* top: calc(50% - (1.5rem * 1.2) / 2); */
+  /* line-height: calc(3rem * 1.2); */
+  line-height: 3rem;
+}
+/* h2::after {
+  content: url("../lesson2.2/images/tiger.png");
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  
+} */
+
+p::after {
+  content: "";
+  display: inline-block;
+  height: 30px;
+  width: 30px;
+  background-image: url("../lesson2.2/images/tiger.png");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+
+h2 {
+  /* border-bottom: 5px solid; */
+  /* width: max-content;
+  margin: auto;
+  padding-bottom: 1rem; */
+  text-align: center;
+  position: relative;
+}
+/* .separator {
+  width: 1rem;
+  height: 5px;
+  background-color: brown;
+  margin: auto;
+} */
+
+h2::after {
+  content: "";
+  width: 1rem;
+  height: 5px;
+  background-color: blue;
+  display: block;
+  margin: auto;
+  margin-top: 1rem;
+}
+
+h2::before {
+  content: attr(title);
+  font-size: 1.5em;
+  position: absolute;
+  top: -0.2em;
+  left: 0;
+  right: 0;
+  /* left: -0.5em; */
+  text-align: center;
+  z-index: -1;
+  color: transparent;
+  text-shadow: 0 0 5px lightskyblue;
+}
+
+a {
+  /* color: inherit; */
+  text-decoration: none;
+}
+a:hover {
+  /* text-decoration: overline; */
+  background-color: #222;
+  color: #000;
+}
+a:active::after {
+  content: "\21FE";
+  color: aquamarine;
+}
+a:link {
+  /* font-family: monospace; */
+  /* color: bisque; */
+}
+a:visited {
+  /* color: orange; */
+}
+
+button {
+  background-color: blueviolet;
+  font-size: 1rem;
+  line-height: 1rem;
+  height: 2rem;
+  box-sizing: border-box;
+  font-family: inherit;
+  padding: 8px 20px;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+}
+button:hover {
+  color: aliceblue;
+  cursor: pointer;
+}
+
+button:active {
+  box-shadow: 0 0 10px 1px blue;
+}
+input {
+  height: 2rem;
+  box-sizing: border-box;
+  vertical-align: top;
+  border: 1px solid blueviolet;
+  border-radius: 8px;
+  font-size: 1rem;
+  padding: 8px 12px;
+  outline: none;
+}
+input:focus {
+  /* color: blue;
+  border-color: blue;
+  outline: 4px dotted silver; */
+  box-shadow: 0 0 5px #0004;
+}
+
+p:first-line {
+  color: green;
+}
+h2:first-letter {
+  /* font-size: 1.5em; */
+  text-transform: uppercase;
+  text-shadow: 1px 1px 5px red;
+}
+
+section:nth-child(2) {
+  background-color: silver;
+}
+li:first-child {
+  color: grey;
+}
+li:nth-child(2n-1) {
+  background-color: cornflowerblue;
+}
+
+section:nth-of-type(2) {
+  filter: blur(2px);
+}
+
+nav {
+  font-size: 0;
+}
+
+nav a {
+  display: inline-block;
+  font-size: 1rem;
+  background-color: bisque;
+  margin-right: 20px;
+  width: calc(20% - (80px / 5));
+  text-align: center;
+  border-radius: 8px;
+  padding: 8px;
+  box-sizing: border-box;
+}
+nav a:last-child {
+  margin: 0;
+}
+
+input[type="checkbox"] {
+  display: none;
+  /* visibility: hidden; */
+}
+input[type="checkbox"] + label {
+  /* background-color: violet; */
+  padding-left: 1.4rem;
+  position: relative;
+  margin-bottom: 20px;
+  cursor: pointer;
+}
+input[type="checkbox"] + label::before {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  border: 2px solid blueviolet;
+  position: absolute;
+  box-sizing: border-box;
+  top: 0.1rem;
+  border-radius: 8px;
+}
+input[type="checkbox"] + label::after {
+  content: "";
+  display: block;
+  width: 1rem;
+  height: 1rem;
+  /* border: 2px solid blueviolet; */
+  position: absolute;
+  box-sizing: border-box;
+  top: 0.1rem;
+  /* border-radius: 8px; */
+  /* background-color: orange; */
+  background-image: url("../lesson2.2/images/tiger.png");
+  background-size: 75%;
+  background-repeat: no-repeat;
+  background-position: center;
+}
+input[type="checkbox"]:checked + label::after {
+  background-image: url("../lesson2.2/images/tiger.png");
+}
+
+/* https://habr.com/ru/articles/126207/ */
