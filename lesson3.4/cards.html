@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css"
+      integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+    <style>
+      body {
+        margin: 0;
+        height: 100vh;
+        display: grid;
+        grid-template-columns: repeat(3, auto);
+        justify-content: center;
+        align-content: center;
+        gap: 30px;
+      }
+      .card {
+        width: 100px;
+        height: 100px;
+        box-shadow: 0 0 5px #2224;
+        border-radius: 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        font-size: 3em;
+        color: #0008;
+        background-image: radial-gradient(khaki 30%, springgreen 50%, navy 80%);
+      }
+      .card:nth-child(5) {
+        background-image: radial-gradient(khaki 30%, orangered 80%);
+        color: #2229;
+        grid-column-start: 3;
+        grid-row-start: 3;
+        align-self: center;
+        justify-self: flex-end;
+      }
+      @media screen and (max-width: 1000px) {
+        body {
+          grid-template-columns: repeat(3, 1fr);
+          grid-auto-rows: 1fr;
+          padding: 100px;
+          box-sizing: border-box;
+        }
+        .card {
+          height: auto;
+          width: auto;
+        }
+        .card:nth-child(5) {
+          width: 100px;
+          height: 100px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="card"><i class="fa-solid fa-cloud"></i></div>
+    <div class="card"><i class="fa-solid fa-smog"></i></div>
+    <div class="card"><i class="fa-solid fa-cloud-bolt"></i></div>
+    <div class="card"><i class="fa-solid fa-tornado"></i></div>
+    <div class="card"><i class="fa-solid fa-sun"></i></div>
+    <div class="card"><i class="fa-solid fa-water"></i></div>
+    <div class="card"><i class="fa-solid fa-bolt-lightning"></i></div>
+    <div class="card"><i class="fa-solid fa-umbrella"></i></div>
+    <div class="card"><i class="fa-regular fa-snowflake"></i></div>
+  </body>
+</html>
