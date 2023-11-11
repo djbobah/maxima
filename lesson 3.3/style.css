@@ -199,10 +199,9 @@ input[type="checkbox"] {
   /* visibility: hidden; */
 }
 input[type="checkbox"] + label {
-  /* background-color: violet; */
   padding-left: 1.4rem;
+  line-height: 1;
   position: relative;
-  margin-bottom: 20px;
   cursor: pointer;
 }
 input[type="checkbox"] + label::before {
@@ -216,24 +215,22 @@ input[type="checkbox"] + label::before {
   top: 0.1rem;
   border-radius: 8px;
 }
+
 input[type="checkbox"] + label::after {
   content: "";
   display: block;
   width: 1rem;
   height: 1rem;
-  /* border: 2px solid blueviolet; */
   position: absolute;
   box-sizing: border-box;
   top: 0.1rem;
-  /* border-radius: 8px; */
-  /* background-color: orange; */
-  background-image: url("../lesson2.2/images/tiger.png");
   background-size: 75%;
   background-repeat: no-repeat;
   background-position: center;
-}
-input[type="checkbox"]:checked + label::after {
   background-image: url("../lesson2.2/images/tiger.png");
+  visibility: hidden;
 }
 
-/* https://habr.com/ru/articles/126207/ */
+input[type="checkbox"]:checked + label::after {
+  visibility: visible;
+}
