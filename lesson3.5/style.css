@@ -1,0 +1,151 @@
+body {
+  background-image: radial-gradient(
+    circle,
+    rgb(74, 81, 88),
+    navy,
+    rgb(7, 7, 30) 80%
+  );
+  min-height: 100vh;
+}
+
+.container {
+  display: flex;
+  min-height: 100vh;
+  align-items: center;
+  justify-content: center;
+  gap: 60px;
+  flex-wrap: wrap;
+  width: 700px;
+  margin: auto;
+  align-content: center;
+}
+.card {
+  background-color: #fff8;
+  width: 320px;
+  padding: 24px;
+  box-shadow: 0 0 5px 0 #0004;
+  box-sizing: border-box;
+  border-radius: 8px;
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+.card_grid {
+  display: grid;
+  grid-template-columns: 60px 1fr;
+}
+.card__text {
+  margin: 0;
+  background-image: linear-gradient(to right, #fff1, silver);
+  min-height: 20px;
+  /* height: 20px; */
+  border-radius: 4px;
+}
+.card__text_2 {
+  grid-column-end: span 2;
+}
+.card_special {
+  background-color: rgba(255, 20, 145, 0.384);
+  position: relative;
+  /* transform: translate(30px, 0); */
+  /* transform: translate(100%, 0); */
+  /* position: relative; */
+  /* left: 100%; */
+  /* transform: translate(100px, 0) rotate(50deg); */
+  /* transform: scale(-1, 1); */
+  /* transform: skew(6deg, 6deg); */
+  transform-origin: 0 50%;
+  transform-origin: top left;
+  transform-origin: 54px 54px;
+  /* transform: rotate(0deg); */
+  transition-duration: 1000ms;
+  transition-delay: 1s;
+  transition: 2s 1s;
+  transition-property: transform, box-shadow;
+}
+.card_special::before {
+  content: "";
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  /* background-color: #000; */
+  border-radius: 50%;
+  top: 50px;
+  left: 50px;
+}
+.card_special:hover {
+  transform: scale(1.1, 1.1);
+  background-color: #fff;
+  box-shadow: 0 0 5x 0 #0000, 0 0 15px 0 #0008, 0 0 30px 1px;
+}
+
+.card__pic {
+  margin: 0;
+  background-image: linear-gradient(to right, #fff1, silver);
+  height: 60px;
+  width: 60px;
+  border-radius: 50px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.card__pic::before {
+  content: "";
+  background-color: red;
+  width: 4px;
+  height: 4px;
+  border-radius: 50%;
+}
+.card:nth-child(2) {
+  background-color: rgba(127, 255, 212, 0.285);
+  transform-origin: (54px 54px);
+  animation: card-rotation 3s linear 2;
+}
+/* @keyframes card-rotation {
+  from {
+    opacity: 0.5;
+    transform: translate(50%,1);
+    transform: rotate(0deg);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(360deg);
+  }
+} */
+@keyframes card-rotation {
+  50% {
+    /* opacity: 0.5; */
+    /* transform: translate(0, 0) rotate(0deg); */
+    /* transform: rotate(0deg); */
+  }
+  70% {
+    /* transform: translate(50%, 0) rotate(360deg); */
+  }
+  100% {
+    /* transform: translate(0, 0); */
+  }
+  /* to {
+    opacity: 1;
+    transform: rotate(360deg);
+  } */
+}
+
+.card:nth-child(2) .card__pic {
+  transform-origin: 0 center;
+  animation: anime 5s linear infinite;
+}
+@keyframes anime {
+  0% {
+    transform: scale(1, 1) rotateY(0deg);
+    background-image: linear-gradient(to right, #fff1, silver);
+  }
+  50% {
+    transform: scale(1.2, 1.2) rotateY(180deg);
+    background-image: linear-gradient(to right, #fff1, #fff1);
+  }
+  100% {
+    transform: rotateY(360deg);
+    background-image: linear-gradient(to right, #fff1, silver);
+  }
+}
