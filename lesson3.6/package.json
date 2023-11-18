@@ -1,0 +1,7 @@
+{
+  "dependencies": {
+    "@fontsource/inter": "^5.0.15",
+    "@fontsource/nunito": "^5.0.15",
+    "bootstrap-icons": "^1.11.1"
+  }
+}
