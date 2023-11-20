@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>3d</title>
+    <style>
+      body {
+        height: 100vh;
+        width: 100vw;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        perspective: 1000;
+        perspective-origin: center center;
+      }
+
+      .wrapper {
+        width: 300px;
+        height: 300px;
+        border: 3px dotted #000;
+        margin: calc(50vh - 300px) auto;
+        position: relative;
+        transform-style: preserve-3d;
+        animation: rotate 5s infinite linear;
+      }
+
+      .inner {
+        width: 300px;
+        height: 300px;
+        border: 3px solid #000;
+        position: absolute;
+        opacity: 0.7;
+      }
+
+      .inner-top {
+        background: #58ba93;
+        transform: translateY(-150px) rotateX(90deg);
+      }
+
+      .inner-left {
+        background: #ba9358;
+        transform: translateX(-150px) rotateY(90deg);
+      }
+
+      .inner-back {
+        background: #9358ba;
+        transform: translateZ(-150px);
+      }
+
+      .inner-bottom {
+        background: #8ba935;
+        transform: translateY(150px) rotateX(90deg);
+      }
+
+      .inner-right {
+        background: #a9358b;
+        transform: translateX(150px) rotateY(90deg);
+      }
+
+      .inner-front {
+        background: #358ba9;
+        transform: translateZ(150px);
+      }
+
+      @keyframes rotate {
+        100% {
+          transform: rotateY(360deg) rotateX(360deg);
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="wrapper">
+      <div class="inner inner-top"></div>
+      <div class="inner inner-left"></div>
+      <div class="inner inner-back"></div>
+      <div class="inner inner-bottom"></div>
+      <div class="inner inner-right"></div>
+      <div class="inner inner-front"></div>
+    </div>
+  </body>
+</html>
