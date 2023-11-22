@@ -1,0 +1,30 @@
+@import "./styles/variables";
+@import "./styles/mixins";
+@import url("https://fonts.googleapis.com/css2?family=Bungee+Spice&display=swap");
+
+body {
+  @extend %flex-center;
+  background-color: $bg-color;
+  font-family: "Bungee Spice", Impact, fantasy;
+}
+
+@import "./styles/calendar"; // .calendar .week-day {
+//   background-color: $main-color;
+//   // @include size-container($size, $size);
+//   // @extend %flex-center;
+//   font-size: $size * 2;
+// }
+// .calendar .day {
+//   border: 1px solid $secondary-color;
+//   // @include size-container($size, $size);
+//   // @extend %flex-center;
+//   font-size: $size * 3;
+// }
+
+// .day:nth-of-type(10) {
+//   border-color: $main-color;
+//   @include size-container($size, $size);
+//   @include circle(40px);
+//   align-self: center;
+//   justify-self: center;
+// }

@@ -1,0 +1,14 @@
+@mixin size-container($r, $p) {
+  padding: $p;
+  border-radius: $r;
+}
+
+@mixin square($sz) {
+  width: $sz;
+  height: $sz;
+}
+
+@mixin circle($sz) {
+  @include square($sz);
+  border-radius: 50%;
+}

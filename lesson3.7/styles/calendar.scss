@@ -1,0 +1,26 @@
+.calendar {
+  height: calc(100vh - $size * 10);
+  padding: $size * 5;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  grid-template-rows: $size * 5;
+  gap: $size * 2;
+  background-color: $bg-color;
+  color: $text-color;
+  max-width: $size * 100;
+  flex: 1;
+
+  & > * {
+    @include size-container($size, $size);
+    @extend %flex-center;
+  }
+  .week-day {
+    background-color: $main-color;
+
+    font-size: $size * 2;
+  }
+  .day {
+    border: 1px solid $secondary-color;
+    font-size: $size * 3;
+  }
+}
