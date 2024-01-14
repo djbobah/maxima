@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Class</title>
+    <style>
+      body {
+        margin: 0;
+      }
+      .sky {
+        height: 100vh;
+        background: radial-gradient(navy, indigo);
+        position: relative;
+      }
+      .star {
+        width: 30px;
+        height: 30px;
+        background: url(star-solid.svg) center / contain no-repeat;
+        position: absolute;
+        transition: transform 1000ms;
+      }
+      .star.active {
+        /* width: 30px;
+        height: 30px; */
+        background: url(star-solid-w.svg) center / contain no-repeat;
+        transform: scale(1.5);
+      }
+    </style>
+  </head>
+  <body>
+    <div class="sky"></div></div>
+    <script src="../funcs.js"></script>
+    <script src="script.js"></script>
+    <script src="stars.js"></script>
+  </body>
+</html>
