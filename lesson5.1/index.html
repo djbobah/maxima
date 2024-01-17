@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>React intro</title>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/react/18.2.0/umd/react.production.min.js"
+      integrity="sha512-8Q6Y9XnTbOE+JNvjBQwJ2H8S+UV4uA6hiRykhdtIyDYZ2TprdNmWOUaKdGzOhyr4dCyk287OejbPvwl7lrfqrQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/react-dom/18.2.0/umd/react-dom.production.min.js"
+      integrity="sha512-MOCpqoRoisCTwJ8vQQiciZv0qcpROCidek3GTFS6KTk2+y7munJIlKCVkFCYY+p3ErYFXCjmFjnfTTRSC1OHWQ=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/7.23.8/babel.min.js"
+      integrity="sha512-EloEMxhHnDVjte/OduE0UfxufBH8ug8MyNzYa7bu77Ad5ewVaNT2coWlB30S1a7XqoeGoCARY/xNl9UxSv79tg=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+  </head>
+  <body>
+    <div id="root"></div>
+    <script type="text/babel">
+      // ReactDOM.render(
+      //   React.createElement("h1", null, "Hello React!"),
+      //   document.getElementById("root")
+      // );
+
+      // ReactDOM.render(
+      //   React.createElement(
+      //     "h1",
+      //     { className: "caption" },
+      //     "Hello ",
+      //     React.createElement(
+      //       "span",
+      //       {
+      //         title: "This is span!",
+      //         style: {
+      //           color: "red",
+      //           fontSize: "1.5em",
+      //           fontFamily: "monospace",
+      //         },
+      //       },
+      //       "React"
+      //     ),
+      //     "!"
+      //   ),
+
+      //   document.getElementById("root")
+      // );
+
+      // ReactDOM.render(
+      //   <h1 className="caption"> Hello React!</h1>,
+      //   document.getElementById("root")
+      // );
+      let space = " ";
+
+      // ReactDOM.render(
+      //   <h1 className="caption">
+      //     Hello{space}
+      //     <span>React!</span>
+      //   </h1>,
+      //   document.getElementById("root")
+      // );
+
+      ReactDOM.render(
+        <>
+          <h1 className="caption">
+            Hello{space}
+            <span
+              style={{
+                color: "red",
+                fontSize: "1.5em",
+                fontFamily: "monospace",
+              }}
+            >
+              React!
+            </span>
+          </h1>
+          <p></p>
+        </>,
+        document.getElementById("root")
+      );
+    </script>
+  </body>
+</html>
